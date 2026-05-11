@@ -1,73 +1,135 @@
-# React + TypeScript + Vite
+# ⚡ TanStack Query: Learn Everything
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A complete hands-on repository for learning and mastering **TanStack Query (React Query)** through practical implementations and real-world examples. This project covers everything from basic data fetching to advanced caching, infinite scrolling, mutations, and performance optimization.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# 📑 Table of Contents
 
-## React Compiler
+* [Repository Overview](#repository-overview)
+* [Getting Started](#getting-started)
+* [Core Concepts Covered](#core-concepts-covered)
+* [Advanced Features](#advanced-features)
+* [Technical Skills Learned](#technical-skills-learned)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+# 🌟 Repository Overview
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+This repository is focused on understanding how **TanStack Query** simplifies server-state management in modern React applications. Every concept is implemented practically to demonstrate real-world usage patterns and best practices.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+# 🚀 Getting Started
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+This section introduces the fundamentals of installing and configuring **TanStack Query** in a React application.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+* Installing TanStack Query
+* Configuring `QueryClient`
+* Setting up `QueryClientProvider`
+* Understanding Queries & Query Keys
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+# 🛠 Core Concepts Covered
+
+## 🔹 Simplified Data Fetching
+
+Learn how TanStack Query replaces manual API handling with `useState` and `useEffect` by using powerful query hooks.
+
+## 🔹 Built-in Loading & Error States
+
+Handle server states easily using built-in properties such as:
+
+* `isPending`
+* `isError`
+* `error`
+* `status`
+
+---
+
+## 🔹 Advanced Caching
+
+Understand how TanStack Query automatically caches server data and manages memory efficiently using:
+
+* Cache Management
+* Garbage Collection (`gcTime`)
+* Automatic Background Refetching
+
+---
+
+## 🔹 Stale Time Management
+
+Learn how **Stale Time** controls data freshness and minimizes unnecessary API requests.
+
+* Fresh vs Stale Data
+* Background Refetching
+* Performance Optimization
+
+---
+
+# ⚡ Advanced Features
+
+## 🔹 CRUD Operations with `useMutation`
+
+Perform Create, Update, and Delete operations using:
+
+* `useMutation`
+* Optimistic Updates
+* Invalidating Queries
+
+---
+
+## 🔹 Pagination
+
+Implement efficient pagination using dynamic query keys and automatic refetching.
+
+* Page-based Data Fetching
+* Query Key Management
+* Smooth UI Updates
+
+---
+
+## 🔹 Infinite Scrolling
+
+Build modern infinite scrolling functionality using:
+
+* `useInfiniteQuery`
+* Intersection Observer API
+* Dynamic Page Fetching
+
+---
+
+## 🔹 Polling
+
+Keep UI data synchronized with the server by automatically refetching data at intervals.
+
+* Real-time-like Updates
+* Refetch Intervals
+* Live Data Synchronization
+
+---
+
+## 🔹 DevTools Integration
+
+Visualize and debug query states using **React Query DevTools**.
+
+* Cache Inspection
+* Query Status Tracking
+* Background Fetch Monitoring
+
+---
+
+# 🎯 Technical Skills Learned
+
+* Server State Management
+* Advanced Data Fetching Patterns
+* API Caching Strategies
+* Infinite Scrolling Techniques
+* CRUD Operations with Mutations
+* Performance Optimization
+* Modern React Best Practices
+
+---
+
+<!-- > **Note:** Every folder in this repository contains practical implementations with clean and well-commented code to help understand TanStack Query concepts effectively. -->
