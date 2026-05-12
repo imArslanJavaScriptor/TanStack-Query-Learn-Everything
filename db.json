@@ -1,0 +1,490 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "Why don’t Developers like deployements on Friday?",
+      "body": "Because it kill the joy of the weekends."
+    },
+    {
+      "id": "5",
+      "title": "Why did the developer quit his job?",
+      "body": "Because he didn't get arrays."
+    },
+    {
+      "id": "6",
+      "title": "What is a programmer's favorite hangout place?",
+      "body": "The Foo Bar."
+    },
+    {
+      "id": "7",
+      "title": "Why do Java developers wear glasses?",
+      "body": "Because they don't C#."
+    },
+    {
+      "id": "8",
+      "title": "What do you call a programmer from Finland?",
+      "body": "Nerdic."
+    },
+    {
+      "id": "9",
+      "title": "Why was the function always happy?",
+      "body": "Because it had no arguments."
+    },
+    {
+      "id": "10",
+      "title": "How many programmers does it take to change a lightbulb?",
+      "body": "None, that's a hardware problem."
+    },
+    {
+      "id": "11",
+      "title": "Why did the CSS developer walk out of the restaurant?",
+      "body": "Because of the table layout."
+    },
+    {
+      "id": "12",
+      "title": "What’s the object-oriented way to become wealthy?",
+      "body": "Inheritance."
+    },
+    {
+      "id": "13",
+      "title": "Why did the database administrator leave his wife?",
+      "body": "She had one-to-many relationships."
+    },
+    {
+      "id": "14",
+      "title": "How do you know if a programmer is an extrovert?",
+      "body": "They look at YOUR shoes when they talk to you."
+    },
+    {
+      "id": "15",
+      "title": "Why was the empty array so sad?",
+      "body": "It had no elements of joy."
+    },
+    {
+      "id": "16",
+      "title": "What did the HTML tag say to the CSS?",
+      "body": "I like your style."
+    },
+    {
+      "id": "17",
+      "title": "Why do programmers prefer dark mode?",
+      "body": "Because light attracts bugs."
+    },
+    {
+      "id": "18",
+      "title": "Why did the binary tree go to the dentist?",
+      "body": "It needed a root canal."
+    },
+    {
+      "id": "19",
+      "title": "What is the most used language in programming?",
+      "body": "Profanity."
+    },
+    {
+      "id": "20",
+      "title": "Why are Assembly programmers always soaking wet?",
+      "body": "Because they work below C-level."
+    },
+    {
+      "id": "21",
+      "title": "What did the SQL query say to the tables?",
+      "body": "Can I join you?"
+    },
+    {
+      "id": "22",
+      "title": "Why was the computer cold?",
+      "body": "It left its Windows open."
+    },
+    {
+      "id": "23",
+      "title": "Why don't bachelors like Git?",
+      "body": "They are afraid of commitment."
+    },
+    {
+      "id": "24",
+      "title": "What’s a pirate’s favorite programming language?",
+      "body": "You’d think it’s R, but his first love is the C."
+    },
+    {
+      "id": "25",
+      "title": "Why did the web developer go to the eye doctor?",
+      "body": "They couldn't find the source of the float."
+    },
+    {
+      "id": "26",
+      "title": "What do you call a group of 8 hobbits?",
+      "body": "A hobbyte."
+    },
+    {
+      "id": "27",
+      "title": "Why did the developer use a ladder?",
+      "body": "To reach the high-level language."
+    },
+    {
+      "id": "28",
+      "title": "What do you call a program that plays music?",
+      "body": "An algorithm."
+    },
+    {
+      "id": "29",
+      "title": "Why was the pointer so stressed?",
+      "body": "It had too many references."
+    },
+    {
+      "id": "30",
+      "title": "How does a coder get rich?",
+      "body": "By finding a niche in the cache."
+    },
+    {
+      "id": "31",
+      "title": "Why did the developer break up with GitHub?",
+      "body": "Too many red flags (conflicts)."
+    },
+    {
+      "id": "32",
+      "title": "What is a ghost’s favorite data type?",
+      "body": "Boolean."
+    },
+    {
+      "id": "33",
+      "title": "Why did the function go to therapy?",
+      "body": "It had recursive issues."
+    },
+    {
+      "id": "34",
+      "title": "What did the user say when the site crashed?",
+      "body": "I can’t even."
+    },
+    {
+      "id": "35",
+      "title": "Why do programmers always mix up Christmas and Halloween?",
+      "body": "Because Oct 31 == Dec 25."
+    },
+    {
+      "id": "36",
+      "title": "What’s the best thing about Boolean logic?",
+      "body": "Even if you’re wrong, you’re only off by a bit."
+    },
+    {
+      "id": "37",
+      "title": "Why did the script fail its driving test?",
+      "body": "It kept crashing into the backend."
+    },
+    {
+      "id": "38",
+      "title": "What do you call a developer who doesn't comment code?",
+      "body": "A mystery writer."
+    },
+    {
+      "id": "39",
+      "title": "Why did the API break up with the frontend?",
+      "body": "There was no endpoint in sight."
+    },
+    {
+      "id": "40",
+      "title": "Why do Python programmers have bad aim?",
+      "body": "Because they don't use brackets."
+    },
+    {
+      "id": "41",
+      "title": "What’s a programmer’s favorite snack?",
+      "body": "Microchips."
+    },
+    {
+      "id": "42",
+      "title": "Why was the server always tired?",
+      "body": "It was constantly responding to requests."
+    },
+    {
+      "id": "43",
+      "title": "Why did the loop keep going to the gym?",
+      "body": "To work on its iterations."
+    },
+    {
+      "id": "44",
+      "title": "What did the variable say to the constant?",
+      "body": "You never change!"
+    },
+    {
+      "id": "45",
+      "title": "Why did the programmer bring a map to work?",
+      "body": "To navigate the spaghetti code."
+    },
+    {
+      "id": "46",
+      "title": "How do you invite a developer to a party?",
+      "body": "Send an invite to their localhost."
+    },
+    {
+      "id": "47",
+      "title": "What’s a programmer's favorite coffee?",
+      "body": "Java, obviously."
+    },
+    {
+      "id": "48",
+      "title": "Why did the bot fail the captcha?",
+      "body": "It had an existential crisis."
+    },
+    {
+      "id": "49",
+      "title": "What do you call a programmer who sleeps well?",
+      "body": "An asynchronous worker."
+    },
+    {
+      "id": "50",
+      "title": "Why was the JSON object so lonely?",
+      "body": "It had no keys to anyone’s heart."
+    },
+    {
+      "id": "51",
+      "title": "Why was the developer a good drummer?",
+      "body": "He knew all the best algorithms."
+    },
+    {
+      "id": "52",
+      "title": "What is a debugger's favorite movie?",
+      "body": "The Bug's Life."
+    },
+    {
+      "id": "53",
+      "title": "Why did the coder go to the beach?",
+      "body": "To catch some waves and surf the net."
+    },
+    {
+      "id": "54",
+      "title": "How do you keep a programmer in the shower?",
+      "body": "Give them a bottle of shampoo that says 'Lather, Rinse, Repeat'."
+    },
+    {
+      "id": "55",
+      "title": "Why did the developer get kicked out of the library?",
+      "body": "He was shouting 'I found the source!'"
+    },
+    {
+      "id": "56",
+      "title": "What’s a web designer’s favorite color?",
+      "body": "#000000 (Because it’s classic)."
+    },
+    {
+      "id": "57",
+      "title": "Why did the compiler fail the test?",
+      "body": "It had too much syntax anxiety."
+    },
+    {
+      "id": "58",
+      "title": "Why are programmers so good at math?",
+      "body": "Because they know how to solve for X."
+    },
+    {
+      "id": "59",
+      "title": "What do you call a fake coding tutorial?",
+      "body": "A pseudo-code."
+    },
+    {
+      "id": "60",
+      "title": "Why did the app go to jail?",
+      "body": "It was caught stealing cookies."
+    },
+    {
+      "id": "61",
+      "title": "Why do dev-ops engineers love the forest?",
+      "body": "They enjoy the logs."
+    },
+    {
+      "id": "62",
+      "title": "Why did the programmer go bankrupt?",
+      "body": "Because he lost his domain."
+    },
+    {
+      "id": "63",
+      "title": "How do you make a function stop talking?",
+      "body": "You give it a return statement."
+    },
+    {
+      "id": "64",
+      "title": "Why did the developer stay at work until 4 AM?",
+      "body": "He was in a recursive loop."
+    },
+    {
+      "id": "65",
+      "title": "What did the motherboard say to the CPU?",
+      "body": "You’re the brain of this operation."
+    },
+    {
+      "id": "66",
+      "title": "Why do programmers like cats?",
+      "body": "Because they have a lot of whiskers (and kernels)."
+    },
+    {
+      "id": "67",
+      "title": "Why did the programmer cross the road?",
+      "body": "To get to the other site."
+    },
+    {
+      "id": "68",
+      "title": "What’s a robot’s favorite dance?",
+      "body": "The algorithm."
+    },
+    {
+      "id": "69",
+      "title": "Why did the script hate the terminal?",
+      "body": "It was tired of being commanded."
+    },
+    {
+      "id": "70",
+      "title": "How does a coder stay hydrated?",
+      "body": "By drinking from the data stream."
+    },
+    {
+      "id": "71",
+      "title": "Why did the developer use a VPN?",
+      "body": "To hide their true identity."
+    },
+    {
+      "id": "72",
+      "title": "What do you call a coding error in a plane?",
+      "body": "A fly in the ointment."
+    },
+    {
+      "id": "73",
+      "title": "Why did the function get promoted?",
+      "body": "It was highly efficient."
+    },
+    {
+      "id": "74",
+      "title": "What is a programmer’s favorite season?",
+      "body": "Compile-time."
+    },
+    {
+      "id": "75",
+      "title": "Why was the developer always late?",
+      "body": "He was stuck in a traffic loop."
+    },
+    {
+      "id": "76",
+      "title": "What do you call a programmer who can’t find a job?",
+      "body": "A 404 Error."
+    },
+    {
+      "id": "77",
+      "title": "Why did the computer go to the doctor?",
+      "body": "It had a virus."
+    },
+    {
+      "id": "78",
+      "title": "What do you call a lazy programmer?",
+      "body": "Efficient (they write code that does the work for them)."
+    },
+    {
+      "id": "79",
+      "title": "Why did the developer buy a new keyboard?",
+      "body": "To improve their input."
+    },
+    {
+      "id": "80",
+      "title": "What’s a programmer’s favorite drink?",
+      "body": "Root beer."
+    },
+    {
+      "id": "81",
+      "title": "Why was the developer so tired?",
+      "body": "He spent all night debugging his dreams."
+    },
+    {
+      "id": "82",
+      "title": "What do you call a programmer who loves the ocean?",
+      "body": "A C-programmer."
+    },
+    {
+      "id": "83",
+      "title": "Why did the script fail to run?",
+      "body": "It didn't have the right permissions."
+    },
+    {
+      "id": "84",
+      "title": "What is a programmer’s favorite sport?",
+      "body": "Ping (and pong)."
+    },
+    {
+      "id": "85",
+      "title": "Why was the software so expensive?",
+      "body": "It was premium-grade code."
+    },
+    {
+      "id": "86",
+      "title": "What do you call a programmer who tells jokes?",
+      "body": "A pun-grammer."
+    },
+    {
+      "id": "87",
+      "title": "Why did the programmer go to the party?",
+      "body": "To meet some new interfaces."
+    },
+    {
+      "id": "88",
+      "title": "What’s a developer’s favorite game?",
+      "body": "The Elder Scrolls: Skyrim (for the mods)."
+    },
+    {
+      "id": "89",
+      "title": "Why was the developer so happy?",
+      "body": "His code finally compiled on the first try."
+    },
+    {
+      "id": "90",
+      "title": "What do you call a programmer who loves to cook?",
+      "body": "A chef-coder."
+    },
+    {
+      "id": "91",
+      "title": "Why did the developer get a dog?",
+      "body": "To have someone to talk to about their code (Rubber Ducking)."
+    },
+    {
+      "id": "92",
+      "title": "What is a programmer's favorite type of music?",
+      "body": "Heavy metal (for the hardware)."
+    },
+    {
+      "id": "93",
+      "title": "Why was the script so successful?",
+      "body": "It had a great execution."
+    },
+    {
+      "id": "94",
+      "title": "What do you call a programmer who loves history?",
+      "body": "A legacy coder."
+    },
+    {
+      "id": "95",
+      "title": "Why did the developer go to the mountains?",
+      "body": "To find some peace and quiet for their logic."
+    },
+    {
+      "id": "96",
+      "title": "What’s a programmer’s favorite dessert?",
+      "body": "Raspberry Pi."
+    },
+    {
+      "id": "97",
+      "title": "Why was the developer so good at chess?",
+      "body": "He always thought several steps ahead."
+    },
+    {
+      "id": "98",
+      "title": "What do you call a programmer who loves to travel?",
+      "body": "A remote worker."
+    },
+    {
+      "id": "99",
+      "title": "Why did the script get an award?",
+      "body": "For best supporting character."
+    },
+    {
+      "id": "100",
+      "title": "What is a programmer's favorite way to relax?",
+      "body": "By shutting down."
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

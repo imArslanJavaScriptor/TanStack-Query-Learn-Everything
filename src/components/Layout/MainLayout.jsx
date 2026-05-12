@@ -4,11 +4,11 @@ import Header from "./Header"
 
 const MainLayout = () => {
   return (
-    <>
+    <div className="min-h-screen">
     <Header/>
     <Outlet/>
     <Footer/>
-    </>
+    </div>
   )
 }
 

@@ -4,6 +4,9 @@ import Home from "./components/Pages/Home"
 import FetchOld from "./components/Pages/FetchOld"
 import FetchRQ from "./components/Pages/FetchRQ"
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools"
+import Posts from "./components/Pages/Posts"
+import { Toaster } from "react-hot-toast"
 
 const App = () => {
   const queryClient = new QueryClient()
@@ -24,13 +27,25 @@ const App = () => {
         {
           path:"rq",
           element: <FetchRQ/>
+        },
+        {
+          path:"posts",
+          element: <Posts/>
         }
       ]
     }
   ])
   return (
     <QueryClientProvider client={queryClient}>
-      <RouterProvider router={router}/>
+      <Toaster position="top-right"  reverseOrder={false} 
+      toastOptions={{
+        style: {
+          margin: "20px 0",
+        }
+      }}
+       />
+      <ReactQueryDevtools/>
+      <RouterProvider router={router} />
     </QueryClientProvider>
   )
 }
