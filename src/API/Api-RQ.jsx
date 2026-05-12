@@ -13,3 +13,13 @@ export const fetchPosts = async (limit) => {
     return [];
   }
 };
+
+export const fetchPost = async (id) => {
+  try {
+    const response = await api.get(`/posts/${id}`);
+    return response.status === 200 ? response.data : [];
+  } catch (error) {
+    console.log(error);
+    return [];
+  }
+};

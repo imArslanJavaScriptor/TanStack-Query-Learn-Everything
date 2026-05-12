@@ -1,58 +1,62 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom"
-import MainLayout from "./components/Layout/MainLayout"
-import Home from "./components/Pages/Home"
-import FetchOld from "./components/Pages/FetchOld"
-import FetchRQ from "./components/Pages/FetchRQ"
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
-import { ReactQueryDevtools } from "@tanstack/react-query-devtools"
-import Posts from "./components/Pages/Posts"
-import { Toaster } from "react-hot-toast"
-import FetchCardDetails from "./components/Pages/FetchCardDetails"
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import MainLayout from "./components/Layout/MainLayout";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+import { Toaster } from "react-hot-toast";
+import {
+  Home,
+  TraditionalFetching,
+  FetchWithTanStackQuery,
+  SingleCardDetail,
+  TanStackFeaturesRich,
+} from "./components/Pages";
 
 const App = () => {
-  const queryClient = new QueryClient()
+  const queryClient = new QueryClient();
 
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <MainLayout/>,
+      element: <MainLayout />,
       children: [
         {
           path: "/",
-          element: <Home/>
+          element: <Home />,
         },
         {
-          path: "/traditional",
-          element: <FetchOld/>
+          path: "/traditional-fetching",
+          element: <TraditionalFetching />,
         },
         {
-          path:"rq",
-          element: <FetchRQ/>
+          path: "fetch-with-tanstack-query",
+          element: <FetchWithTanStackQuery />,
         },
         {
-          path:"rq/:id",
-          element: <FetchCardDetails/>
+          path: "fetch-with-tanstack-query/:id",
+          element: <SingleCardDetail />,
         },
         {
-          path:"posts",
-          element: <Posts/>
-        }
-      ]
-    }
-  ])
+          path: "tanstack-features-rich",
+          element: <TanStackFeaturesRich />,
+        },
+      ],
+    },
+  ]);
   return (
     <QueryClientProvider client={queryClient}>
-      <Toaster position="top-right"  reverseOrder={false} 
-      toastOptions={{ 
-        style: {
-          margin: "20px 0",
-        }
-      }}
-       />
-      <ReactQueryDevtools/>
+      <Toaster
+        position="top-right"
+        reverseOrder={false}
+        toastOptions={{
+          style: {
+            margin: "20px 0",
+          },
+        }}
+      />
+      <ReactQueryDevtools />
       <RouterProvider router={router} />
     </QueryClientProvider>
-  )
-}
+  );
+};
 
-export default App
+export default App;

@@ -17,17 +17,14 @@ import PostCard from "../UI/PostCard";
 import Modal from "../UI/Modal";
 
 
-const Posts = () => {
+const TanStackFeaturesRich = () => {
   const queryClient = useQueryClient();
   const [search, setSearch] = useState("");
   const [isCreateModalOpen, setIsCreateModalOpen] = useState(false);
   const [editingPost, setEditingPost] = useState(null);
   const { ref, inView } = useInView();
 
-  // ======================================================
   // FETCH POSTS
-  // ======================================================
-
   const {
     data,
     fetchNextPage,
@@ -51,20 +48,15 @@ const Posts = () => {
     },
   });
 
-  // ======================================================
   // AUTO INFINITE SCROLL
-  // ======================================================
-
   useEffect(() => {
     if (inView && hasNextPage) {
       fetchNextPage();
     }
   }, [inView, hasNextPage, fetchNextPage]);
 
-  // ======================================================
+  
   // CREATE POST
-  // ======================================================
-
   const createMutation = useMutation({
     mutationFn: createPost,
 
@@ -81,10 +73,8 @@ const Posts = () => {
     },
   });
 
-  // ======================================================
+  
   // UPDATE POST
-  // ======================================================
-
   const updateMutation = useMutation({
     mutationFn: updatePost,
 
@@ -103,10 +93,8 @@ const Posts = () => {
     },
   });
 
-  // ======================================================
+  
   // DELETE POST WITH OPTIMISTIC UPDATE
-  // ======================================================
-
   const deleteMutation = useMutation({
     mutationFn: deletePost,
 
@@ -201,10 +189,8 @@ const Posts = () => {
   return (
     <div className="min-h-screen bg-linear-to-br from-zinc-950 via-zinc-900 to-black text-white">
       <div className="mx-auto max-w-7xl p-8">
-        {/* ================================================= */}
-        {/* HEADER */}
-        {/* ================================================= */}
 
+        {/* HEADER */}
         <div className="mb-10 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
           <div>
             <h1 className="text-5xl font-black bg-linear-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
@@ -225,10 +211,8 @@ const Posts = () => {
           />
         </div>
 
-        {/* ================================================= */}
-        {/* CREATE / EDIT FORM */}
-        {/* ================================================= */}
 
+        {/* EDIT Post Modal */}
         <Modal
           isOpen={isCreateModalOpen || !!editingPost} 
           onClose={() => {
@@ -255,14 +239,14 @@ const Posts = () => {
           />
         </Modal>
 
-        {/* ================================================= */}
         {/* POSTS GRID */}
-        {/* ================================================= */}
-
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {filteredPosts.map((post) => (
             <PostCard
               key={post.id}
+              id={post.id}
+              title={post.title}
+              body={post.body}
               post={post}
               onDelete={(id) =>
                 deleteMutation.mutate(id)
@@ -276,7 +260,7 @@ const Posts = () => {
         {/* LOAD MORE */}
         {/* ================================================= */}
 
-        {isFetchingNextPage && <Loader />}
+        {isFetchingNextPage && <Loader loadingMessage={"Loading"} />}
 
         <div ref={ref} className="h-20" />
 
@@ -290,4 +274,4 @@ const Posts = () => {
   );
 };
 
-export default Posts;
+export default TanStackFeaturesRich;

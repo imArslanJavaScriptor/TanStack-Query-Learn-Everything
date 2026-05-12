@@ -1,11 +1,6 @@
 {
   "posts": [
     {
-      "id": "1",
-      "title": "Why don’t Developers like deployements on Friday?",
-      "body": "Because it kill the joy of the weekends."
-    },
-    {
       "id": "5",
       "title": "Why did the developer quit his job?",
       "body": "Because he didn't get arrays."

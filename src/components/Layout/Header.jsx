@@ -32,7 +32,7 @@ const Header = () => {
 
           <li>
             <NavLink
-              to="/traditional"
+              to="/traditional-fetching"
               className={({ isActive }) =>
                 `transition-colors duration-200 font-medium ${
                   isActive
@@ -41,13 +41,13 @@ const Header = () => {
                 }`
               }
             >
-              FetchOld
+              TraditionalFetching
             </NavLink>
           </li>
 
           <li>
             <NavLink
-              to="/rq"
+              to="/fetch-with-tanstack-query"
               className={({ isActive }) =>
                 `transition-colors duration-200 font-medium ${
                   isActive
@@ -56,12 +56,12 @@ const Header = () => {
                 }`
               }
             >
-              FetchRQ
+              FetchWithTanstackQuery
             </NavLink>
           </li>
           <li>
             <NavLink
-              to="/posts"
+              to="/tanstack-features-rich"
               className={({ isActive }) =>
                 `transition-colors duration-200 font-medium ${
                   isActive
@@ -70,7 +70,7 @@ const Header = () => {
                 }`
               }
             >
-              Joke Posts
+              TanstackFeaturesRich
             </NavLink>
           </li>
         </ul>

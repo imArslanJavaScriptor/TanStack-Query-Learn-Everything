@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react";
 import { fetchPosts } from "../../API/api-old";
+import Loader from "../UI/Loader";
+import ErrorUI from "../UI/ErrorUI";
+import PostCard from "../UI/PostCard";
 
-const FetchOld = () => {
+const TraditionalFetching = () => {
   // States for loading, error, and posts data
   const [posts, setPosts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -28,24 +31,10 @@ const FetchOld = () => {
   }, []);
 
   // Loading UI
-  if (isLoading)
-    return (
-      <div className="min-h-screen bg-zinc-950 flex items-center justify-center">
-        <p className="text-zinc-300 text-lg animate-pulse">
-          Loading posts...
-        </p>
-      </div>
-    );
+  if (isLoading) return <Loader loadingMessage={"Loading"}/>
 
   // Error UI
-  if (isError)
-    return (
-      <div className="min-h-screen bg-zinc-950 flex items-center justify-center">
-        <p className="text-red-400 text-lg font-medium">
-          Something went wrong!
-        </p>
-      </div>
-    );
+  if (isError) return <ErrorUI/>
 
   return (
     <div className="min-h-screen bg-zinc-950 text-zinc-100 px-6 py-10">
@@ -62,30 +51,12 @@ const FetchOld = () => {
       </div>
 
       {/* Posts */}
-      <ul className="max-w-5xl mx-auto space-y-6">
+      <ul className="max-w-7xl mx-auto grid grid-cols-4 gap-6">
         {posts?.map((curElem) => {
           const { id, title, body } = curElem;
 
           return (
-            <li
-              key={id}
-              className="bg-zinc-900 border border-zinc-800 rounded-xl p-6 hover:border-zinc-700 transition-all duration-300"
-            >
-              {/* ID */}
-              <span className="text-xs text-zinc-500">
-                Post #{id}
-              </span>
-
-              {/* Title */}
-              <h2 className="text-xl font-semibold mt-2 text-zinc-100">
-                {title}
-              </h2>
-
-              {/* Body */}
-              <p className="text-zinc-400 mt-3 leading-relaxed">
-                {body}
-              </p>
-            </li>
+           <PostCard id={id} title={title} body={body}  />
           );
         })}
       </ul>
@@ -93,4 +64,4 @@ const FetchOld = () => {
   );
 };
 
-export default FetchOld;
+export default TraditionalFetching;

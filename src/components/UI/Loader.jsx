@@ -1,10 +1,16 @@
 import React from "react";
 
-const Loader = () => {
+const Loader = ({loadingMessage}) => {
   return (
-    <div className="flex justify-center py-10">
-      <div className="w-12 h-12 border-4 border-blue-500 border-t-transparent rounded-full animate-spin" />
-    </div>
+    <div className="min-h-screen bg-zinc-950 flex items-center justify-center">
+        <div className="text-center space-y-4">
+          <div className="w-14 h-14 border-4 border-zinc-700 border-t-blue-500 rounded-full animate-spin mx-auto"></div>
+
+          <p className="text-zinc-300 text-lg font-medium">
+            {loadingMessage}...
+          </p>
+        </div>
+      </div>
   );
 };
 
