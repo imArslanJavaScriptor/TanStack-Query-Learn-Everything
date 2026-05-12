@@ -479,6 +479,11 @@
       "id": "100",
       "title": "What is a programmer's favorite way to relax?",
       "body": "By shutting down."
+    },
+    {
+      "title": "Im New ",
+      "body": "We all are pedning",
+      "id": "CSx2iIE18Ds"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

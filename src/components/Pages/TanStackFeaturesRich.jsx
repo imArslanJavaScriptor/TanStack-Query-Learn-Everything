@@ -9,13 +9,17 @@ import { useInView } from "react-intersection-observer";
 
 import toast from "react-hot-toast";
 
-import { fetchPosts, deletePost, updatePost, createPost } from "../../API/CRUD-Practice-API";
+import {
+  fetchPosts,
+  deletePost,
+  updatePost,
+  createPost,
+} from "../../API/CRUD-Practice-API";
 import Loader from "../UI/Loader";
 import SkeletonCard from "../UI/SkeletonCard";
 import PostForm from "../UI/PostForm";
 import PostCard from "../UI/PostCard";
 import Modal from "../UI/Modal";
-
 
 const TanStackFeaturesRich = () => {
   const queryClient = useQueryClient();
@@ -25,28 +29,22 @@ const TanStackFeaturesRich = () => {
   const { ref, inView } = useInView();
 
   // FETCH POSTS
-  const {
-    data,
-    fetchNextPage,
-    hasNextPage,
-    isFetchingNextPage,
-    status,
-  } = useInfiniteQuery({
-    queryKey: ["posts"],
+  const { data, fetchNextPage, hasNextPage, isFetchingNextPage, status } =
+    useInfiniteQuery({
+      queryKey: ["posts"],
 
-    queryFn: ({ pageParam = 1 }) =>
-      fetchPosts(pageParam),
+      queryFn: ({ pageParam = 1 }) => fetchPosts(pageParam),
 
-    initialPageParam: 1,
+      initialPageParam: 1,
 
-    getNextPageParam: (lastPage, allPages) => {
-      if (!lastPage || lastPage.length < 12) {
-        return undefined;
-      }
+      getNextPageParam: (lastPage, allPages) => {
+        if (!lastPage || lastPage.length < 12) {
+          return undefined;
+        }
 
-      return allPages.length + 1;
-    },
-  });
+        return allPages.length + 1;
+      },
+    });
 
   // AUTO INFINITE SCROLL
   useEffect(() => {
@@ -55,7 +53,6 @@ const TanStackFeaturesRich = () => {
     }
   }, [inView, hasNextPage, fetchNextPage]);
 
-  
   // CREATE POST
   const createMutation = useMutation({
     mutationFn: createPost,
@@ -73,7 +70,6 @@ const TanStackFeaturesRich = () => {
     },
   });
 
-  
   // UPDATE POST
   const updateMutation = useMutation({
     mutationFn: updatePost,
@@ -93,7 +89,6 @@ const TanStackFeaturesRich = () => {
     },
   });
 
-  
   // DELETE POST WITH OPTIMISTIC UPDATE
   const deleteMutation = useMutation({
     mutationFn: deletePost,
@@ -103,8 +98,7 @@ const TanStackFeaturesRich = () => {
         queryKey: ["posts"],
       });
 
-      const previousPosts =
-        queryClient.getQueryData(["posts"]);
+      const previousPosts = queryClient.getQueryData(["posts"]);
 
       queryClient.setQueryData(["posts"], (oldData) => {
         return {
@@ -120,10 +114,7 @@ const TanStackFeaturesRich = () => {
     },
 
     onError: (_, __, context) => {
-      queryClient.setQueryData(
-        ["posts"],
-        context.previousPosts,
-      );
+      queryClient.setQueryData(["posts"], context.previousPosts);
 
       toast.error("Delete failed");
     },
@@ -144,17 +135,16 @@ const TanStackFeaturesRich = () => {
   // ======================================================
 
   const filteredPosts = useMemo(() => {
-    return (
-      data?.pages
-        ?.flat()
-        ?.filter((post) =>
-          post.title
-            .toLowerCase()
-            .includes(search.toLowerCase()),
-        ) || []
-    );
-  }, [data, search]);
+  // 1. Safely extract pages or default to an empty array
+  const allPages = data?.pages || [];
+  
+  // 2. Flatten and filter
+  return allPages.flat().filter((post) =>
+    post?.title?.toLowerCase().includes(search.toLowerCase())
+  );
+}, [data, search]);
 
+  console.log(data);
   // ======================================================
   // LOADING
   // ======================================================
@@ -178,24 +168,26 @@ const TanStackFeaturesRich = () => {
   if (status === "error") {
     return (
       <div className="flex min-h-screen items-center justify-center bg-black text-white">
-        <h1 className="text-3xl font-bold">
-          Something went wrong
-        </h1>
+        <h1 className="text-3xl font-bold">Something went wrong</h1>
       </div>
     );
   }
 
-
   return (
     <div className="min-h-screen bg-linear-to-br from-zinc-950 via-zinc-900 to-black text-white">
       <div className="mx-auto max-w-7xl p-8">
-
         {/* HEADER */}
         <div className="mb-10 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
           <div>
             <h1 className="text-5xl font-black bg-linear-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
               Infinite CRUD App
             </h1>
+            <button
+              onClick={() => setIsCreateModalOpen(true)}
+              className="mt-4 px-6 py-2 bg-blue-600 hover:bg-blue-500 rounded-xl font-bold transition-colors"
+            >
+              + Create New Post
+            </button>
 
             <p className="mt-2 text-zinc-400">
               TanStack Query + Infinite Scroll + CRUD
@@ -211,10 +203,9 @@ const TanStackFeaturesRich = () => {
           />
         </div>
 
-
         {/* EDIT Post Modal */}
         <Modal
-          isOpen={isCreateModalOpen || !!editingPost} 
+          isOpen={isCreateModalOpen || !!editingPost}
           onClose={() => {
             setIsCreateModalOpen(false);
             setEditingPost(null);
@@ -248,9 +239,7 @@ const TanStackFeaturesRich = () => {
               title={post.title}
               body={post.body}
               post={post}
-              onDelete={(id) =>
-                deleteMutation.mutate(id)
-              }
+              onDelete={(id) => deleteMutation.mutate(id)}
               onEdit={(post) => setEditingPost(post)}
             />
           ))}
@@ -265,9 +254,7 @@ const TanStackFeaturesRich = () => {
         <div ref={ref} className="h-20" />
 
         {!hasNextPage && (
-          <div className="py-10 text-center text-zinc-500">
-            No more posts
-          </div>
+          <div className="py-10 text-center text-zinc-500">No more posts</div>
         )}
       </div>
     </div>
