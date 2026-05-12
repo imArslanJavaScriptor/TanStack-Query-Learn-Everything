@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { fetchPosts } from "../../API/Api-RQ";
 import { useQuery } from "@tanstack/react-query";
 
@@ -5,6 +6,11 @@ const FetchRQ = () => {
   const { data, isLoading, isError, error, isFetching } = useQuery({
     queryKey: ["posts"],
     queryFn: () => fetchPosts(5),
+    // gcTime: 1000, 
+    // staleTime: 1000, 1s ke bad data purana ho jaiga again route hit krne pr server pr api call jai gi. 
+    // Polling
+    // refetchInterval: 1000,
+    // refetchIntervalInBackground: true
   });
 
   // Loading UI
@@ -72,14 +78,16 @@ const FetchRQ = () => {
 
       {/* Posts Grid */}
       <ul className="max-w-7xl mx-auto grid gap-7 md:grid-cols-2 xl:grid-cols-3">
-        {data?.map((curElem) => {
+        {data?.data?.map((curElem) => {
           const { id, title, body } = curElem;
 
           return (
             <li
               key={id}
+              onClick={() => navi}
               className="group bg-zinc-900/80 backdrop-blur-sm border border-zinc-800 rounded-3xl p-6 hover:border-blue-500/60 hover:shadow-2xl hover:shadow-blue-500/10 hover:-translate-y-2 transition-all duration-300"
             >
+              <Link to={`/rq/${id}`}>
               {/* Top Section */}
               <div className="flex items-center justify-between mb-5">
                 <span className="inline-flex items-center rounded-full bg-blue-500/10 border border-blue-500/20 px-3 py-1 text-xs font-medium text-blue-400">
@@ -114,6 +122,7 @@ const FetchRQ = () => {
                   Read More →
                 </button>
               </div>
+              </Link>
             </li>
           );
         })}
