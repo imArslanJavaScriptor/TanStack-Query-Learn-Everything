@@ -1,9 +1,24 @@
+import { NavLink } from "react-router-dom";
+
 const Header = () => {
   return (
     <header>
-      Header
+      <div>
+        <NavLink to="/">ThapaReactQuery</NavLink>
+        <ul>
+          <li>
+            <NavLink to="/">Home</NavLink>
+          </li>
+          <li>
+            <NavLink to="/traditional">FetchOld</NavLink>
+          </li>
+          <li>
+            <NavLink to="/rq"> FetchRQ </NavLink>
+          </li>
+        </ul>
+      </div>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
