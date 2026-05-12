@@ -10,7 +10,7 @@ const Header = () => {
           to="/"
           className="text-2xl font-bold text-zinc-100 tracking-wide hover:text-blue-400 transition-colors duration-200"
         >
-          ThapaReactQuery
+          TanStackQuery/ReactQuery
         </NavLink>
 
         {/* Navigation */}
